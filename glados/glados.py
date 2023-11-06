@@ -17,7 +17,8 @@ def get_driver_version():
 	if system == "Darwin":
 		cmd = r'''/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --version'''
 	elif system == "Windows":
-		cmd = r'''powershell -command "&{(Get-Item 'C:\Program Files\Google\Chrome\Application\chrome.exe').VersionInfo.ProductVersion}"'''
+＃		cmd = r'''powershell -command "&{(Get-Item 'C:\Program Files\Google\Chrome\Application\chrome.exe').VersionInfo.ProductVersion}"'''
+		cmd = r'''powershell -command "&{(Get-Item 'C:\hostedtoolcache\windows\chromium\latest\x64\chrome.exe').VersionInfo.ProductVersion}"'''
 
 	try:
 		out, err = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
