@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v1.2.3
+        uses: browser-actions/setup-chrome@latest
       - name: Install requirements
         run: |
           pip3 install -r ./glados/requirements.txt
